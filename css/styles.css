@@ -1,0 +1,39 @@
+h2{
+	color:white;
+	background-color: #336699;
+	text-transform: uppercase;
+	font-size: 45px;
+    height: 65px;
+    line-height: 65px;
+}
+h1{
+	color: #336699;
+	font-size: 85px;
+}
+h1,h2{
+	font-family: American Captain;
+	text-align: center;
+}
+section{
+	background-color: pink;
+}
+body{
+	background-color: #f2f2f2;
+}
+nav > ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+} 
+li {
+    display: block;
+    width: 60px;
+}
+*::selection {
+  background: #336699; /* WebKit/Blink Browsers */
+  color:white;
+}
+*::-moz-selection {
+  background: #336699; /* Gecko Browsers */
+  color:white;
+}
