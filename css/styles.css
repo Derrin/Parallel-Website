@@ -14,6 +14,9 @@ h1,h2{
 	font-family: American Captain;
 	text-align: center;
 }
+h2{
+  margin-top: 0px;
+}
 section{
 	background-color: pink;
 }
@@ -40,40 +43,53 @@ li {
 /* Class colours */
 .death-knight {
   color:#C41F3B;
+  font-weight: bold;
 }
 .druid {
   color:#FF7D0A;
+  font-weight: bold;
 }
 .hunter {
   color:#ABD473;
+  font-weight: bold;
 }
 .mage {
   color:#69CCF0;
+  font-weight: bold;
 }
 .monk {
   color:#00FF96;
+  font-weight: bold;
 }
 .paladin {
   color:#F58CBA;
+  font-weight: bold;
 }
 .priest {
   color:#FFFFFF;
+  font-weight: bold;
 }
 .rogue {
   color:#FFF569;
+  font-weight: bold;
 }
 .shaman {
   color:#0070DE;
+  font-weight: bold;
 }
 .warlock {
   color:#9482C9;
+  font-weight: bold;
 }
 .warrior {
   color:#C79C6E;
+  font-weight: bold;
 }
 .alliance {
   color:#0078FF;
+  font-weight: bold;
 }
 .horde {
   color:#EE1919;
+  font-weight: bold;
 }
