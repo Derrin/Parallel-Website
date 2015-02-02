@@ -1,106 +1,132 @@
-h2{
-	color:white;
-	background-color: #336699;
-	text-transform: uppercase;
-	font-size: 45px;
-    height: 65px;
-    line-height: 65px;
-  width:100%;
+@font-face {
+  font-style: normal;
+  font-family: 'American Captain';
+  src: url('/fonts/American Captain.eot');
+  src: local('☺'), url('/fonts/American Captain.woff') format('woff'), url('/fonts/American Captain.ttf') format('truetype'), url('/fonts/American Captain.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
 }
-h1{
-	color: #336699;
-	font-size: 85px;
+html,
+body {
+  height: 100%;
 }
-h1,h2{
-	font-family: American Captain;
-	text-align: center;
+body {
+  height: 100%;
+  color: #333333;
+  background: linear-gradient(to bottom right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.25) 100%);
 }
-h2{
-  margin-top: 0px;
+h1 {
+  margin: 0;
+  padding: 0;
+  color: #336699;
+  font-size: 85px;
+  font-family: American Captain;
+  text-align: center;
+  margin-bottom: 15px;
 }
-section{
-	background-color: pink;
+h1 small {
+  display: block;
+  color: #0677B0;
 }
-body{
-	background-color: #f2f2f2;
-}
-nav > ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-} 
-li {
-    display: block;
-    width: 60px;
-}
-*::selection {
-  background: #336699; /* WebKit/Blink Browsers */
-  color:white;
-}
-*::-moz-selection {
-  background: #336699; /* Gecko Browsers */
-  color:white;
+body {
+  font-family: American Captain;
 }
 /* Class colours */
 .death-knight {
-  color:#C41F3B;
-  font-weight: bold;
+  color: #C41F3B;
 }
 .druid {
-  color:#FF7D0A;
-  font-weight: bold;
+  color: #FF7D0A;
 }
 .hunter {
-  color:#ABD473;
-  font-weight: bold;
+  color: #ABD473;
 }
 .mage {
-  color:#69CCF0;
-  font-weight: bold;
+  color: #69CCF0;
 }
 .monk {
-  color:#00FF96;
-  font-weight: bold;
+  color: #00FF96;
 }
 .paladin {
-  color:#F58CBA;
-  font-weight: bold;
+  color: #F58CBA;
 }
 .priest {
-  color:#FFFFFF;
-  font-weight: bold;
+  color: #FFFFFF;
 }
 .rogue {
-  color:#FFF569;
-  font-weight: bold;
+  color: #FFF569;
 }
 .shaman {
-  color:#0070DE;
-  font-weight: bold;
+  color: #0070DE;
 }
 .warlock {
-  color:#9482C9;
-  font-weight: bold;
+  color: #9482C9;
 }
 .warrior {
-  color:#C79C6E;
-  font-weight: bold;
+  color: #C79C6E;
 }
 .alliance {
-  color:#0078FF;
-  font-weight: bold;
+  color: #0078FF;
 }
 .horde {
-  color:#EE1919;
+  color: #EE1919;
+}
+.death-knight,
+.druid,
+.hunter,
+.mage,
+.monk,
+.paladin,
+.priest,
+.rogue,
+.shaman,
+.warlock,
+.warrior,
+.alliance,
+.horde {
   font-weight: bold;
 }
-
-img{
-  -webkit-border-radius: 100px;
-     -moz-border-radius: 100px;
-          border-radius: 100px;
-  border:3px solid #336699;
+#splash {
+  bottom: 50%;
+  left: 0;
+  right: 0;
+  position: absolute;
+  text-align: center;
 }
-.inactive{
+#splash2 {
+  top: 50%;
+  left: 0;
+  right: 0;
+  position: absolute;
+  text-align: center;
+  font-size: 30px;
+}
+footer {
+  bottom: 0%;
+  left: 0;
+  right: 0;
+  position: absolute;
+  text-align: center;
+}
+*::-moz-selection {
+  background: #336699;
+  /* WebKit/Blink Browsers */
+  color: white;
+}
+*::selection {
+  background: #336699;
+  /* WebKit/Blink Browsers */
+  color: white;
+}
+*::-moz-selection {
+  background: #336699;
+  /* Gecko Browsers */
+  color: white;
+}
+img {
+  border-radius: 100px;
+  border: 3px solid #336699;
+}
+.inactive {
   opacity: 0.5;
 }
