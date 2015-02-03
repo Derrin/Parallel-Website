@@ -25,6 +25,14 @@
 			<h1>Parallel Guild<small>Roster</small></h1>
 		</header>
 		<div class="container">
+<!-- 			<div class="row">
+				<div class="col-md-4 toon" style="text-align:center;">
+				</div>				
+				<div class="col-md-4 toon" style="text-align:center;">
+				</div>				
+				<div class="col-md-4 toon" style="text-align:center;">
+				</div>
+			</div> -->
 		</div>
 		<footer>
 			<p>
@@ -36,16 +44,36 @@
 	    <script type="text/javascript">
 	    	function showToon(toon){
 	    		console.log(toon);
-	    		//$('.container').append(toon.name);
+	    		var toonname = toon.name;
+	    		//"-avatar.jpg"
+                //"-card.jpg"
+                //"-profilemain.jpg"
+                //"-inset.jpg"
+
+	    		var img = toon.thumbnail.split("-avatar.jpg");
+	    		$('.toon').append('<h3><img src="http://eu.battle.net/static-render/eu/' + img[0] +'-profilemain.jpg" alt="image of ' + toonname +'">');
 	    		//console.log('showing Toon');
+	    	}
+	    	function showGuild(guild){
+	    		var members = guild.members;
+	    		var img,name,toon;
+	    		for (var i = 0; i < members.length; i++) {
+	    			toon = members[i].character;
+	    			img = toon.thumbnail.split("-avatar.jpg");
+	    			name= toon.name;
+	    			if(toon.level>10){
+	    				$('.container').append('<div style="float:left;margin : 5px;"><img src="http://eu.battle.net/static-render/eu/' + img[0] +'-avatar.jpg" alt="image of ' + name +'"><h3>' + name +'</h3></div>');
+	    			}
+				}
 	    	}
 	    	function getData(){
 	    		$.ajax({
-	    			url : 'https://eu.api.battle.net/wow/character/Silvermoon/Derrin?locale=en_GB&apikey=utjuren597wypkfd2qkvp4u27kjyap8e',
+	    			url : 'https://eu.api.battle.net/wow/guild/Silvermoon/Parallel?fields=members&jsonp=showGuild&locale=en_GB&apikey=utjuren597wypkfd2qkvp4u27kjyap8e',
+	    			//url : 'https://eu.api.battle.net/wow/character/Silvermoon/Derrin?locale=en_GB&jsonp=showToon&apikey=utjuren597wypkfd2qkvp4u27kjyap8e',
 	    			type: 'get',
-	    			success: function(json){
-	    				showToon(json);
-	    			}
+	    			dataType: 'jsonp',
+	    			//success: showToon
+	    			success : showGuild
 	    		});
 	    	}
 	    	function callBack(data){
