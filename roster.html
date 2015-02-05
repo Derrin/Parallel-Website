@@ -34,14 +34,250 @@
 				</div>
 			</div> -->
 		</div>
-		<footer>
+		<!-- <footer>
 			<p>
 				All Rights Reserved by Parallel &copy; 2015
 			</p>
-		</footer>
+		</footer> -->
 	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 	    <script src="js/bootstrap.min.js"></script>
 	    <script type="text/javascript">
+	    	var cloakEnchants = [
+		    	{effectid : 5281, 
+				 spellid  : 158877,
+				 itemid   : 110631,
+				 itemslot : 'Cloak', 
+				 name     : 'Breath of Critical Strike'
+				},
+				{effectid : 5298, 
+				 spellid  : 158878,
+				 itemid   : 110632,
+				 itemslot : 'Cloak', 
+				 name     : 'Breath of Haste'
+				},
+				{effectid : 5300, 
+				 spellid  : 158879,
+				 itemid   : 110633,
+				 itemslot : 'Cloak', 
+				 name     : 'Breath of Mastery'
+				},
+				{effectid : 5302, 
+				 spellid  : 158880,
+				 itemid   : 110634,
+				 itemslot : 'Cloak', 
+				 name     : 'Breath of Multistrike'
+				},
+				{effectid : 5304, 
+				 spellid  : 158881,
+				 itemid   : 110635,
+				 itemslot : 'Cloak', 
+				 name     : 'Breath of Versatility'
+				}];
+
+			var bestCloakEnchants = [
+				{effectid : 5310, 
+				 spellid  : 158884,
+				 itemid   : 110652,
+				 itemslot : 'Cloak', 
+				 name     : 'Gift of Critical Strike'
+				},
+				{effectid : 5311, 
+				 spellid  : 158885,
+				 itemid   : 110653,
+				 itemslot : 'Cloak', 
+				 name     : 'Gift of Haste'
+				},
+				{effectid : 5312, 
+				 spellid  : 158886,
+				 itemid   : 110654,
+				 itemslot : 'Cloak', 
+				 name     : 'Gift of Mastery'
+				},
+				{effectid : 5313, 
+				 spellid  : 158887,
+				 itemid   : 110655,
+				 itemslot : 'Cloak', 
+				 name     : 'Gift of Multistrike'
+				},
+				{effectid : 5314, 
+				 spellid  : 158889,
+				 itemid   : 110656,
+				 itemslot : 'Cloak', 
+				 name     : 'Gift of Versatility'
+				}];
+
+			var neckEnchants = [
+				{effectid : 5285, 
+				 spellid  : 158892,
+				 itemid   : 110624,
+				 itemslot : 'Neck', 
+				 name     : 'Breath of Critical Strike'
+				},
+				{effectid : 5292, 
+				 spellid  : 158893,
+				 itemid   : 110625,
+				 itemslot : 'Neck', 
+				 name     : 'Breath of Haste'
+				},
+				{effectid : 5293, 
+				 spellid  : 158894,
+				 itemid   : 110626,
+				 itemslot : 'Neck', 
+				 name     : 'Breath of Mastery'
+				},
+				{effectid : 5294, 
+				 spellid  : 158895,
+				 itemid   : 110627,
+				 itemslot : 'Neck', 
+				 name     : 'Breath of Multistrike'
+				},
+				{effectid : 5295, 
+				 spellid  : 158896,
+				 itemid   : 110628,
+				 itemslot : 'Neck', 
+				 name     : 'Breath of Versatility'
+				}];
+
+			var bestNeckEnchants = [
+				{effectid : 5317, 
+				 spellid  : 158899,
+				 itemid   : 110645,
+				 itemslot : 'Neck', 
+				 name     : 'Gift of Critical Strike'
+				},
+				{effectid : 5318, 
+				 spellid  : 158900,
+				 itemid   : 110646,
+				 itemslot : 'Neck', 
+				 name     : 'Gift of Haste'
+				},
+				{effectid : 5319, 
+				 spellid  : 158901,
+				 itemid   : 110647,
+				 itemslot : 'Neck', 
+				 name     : 'Gift of Mastery'
+				},
+				{effectid : 5320, 
+				 spellid  : 158902,
+				 itemid   : 110648,
+				 itemslot : 'Neck', 
+				 name     : 'Gift of Multistrike'
+				},
+				{effectid : 5321, 
+				 spellid  : 158903,
+				 itemid   : 110649,
+				 itemslot : 'Neck', 
+				 name     : 'Gift of Versatility'
+				}];
+
+			var ringEnchants = [
+				{effectid : 5284, 
+				 spellid  : 158907,
+				 itemid   : 110617,
+				 itemslot : 'Ring', 
+				 name     : 'Breath of Critical Strike'
+				},
+				{effectid : 5297, 
+				 spellid  : 158908,
+				 itemid   : 110618,
+				 itemslot : 'Ring', 
+				 name     : 'Breath of Haste'
+				},
+				{effectid : 5299, 
+				 spellid  : 158909,
+				 itemid   : 110619,
+				 itemslot : 'Ring', 
+				 name     : 'Breath of Mastery'
+				},
+				{effectid : 5301, 
+				 spellid  : 158910,
+				 itemid   : 110620,
+				 itemslot : 'Ring', 
+				 name     : 'Breath of Multistrike'
+				},
+				{effectid : 5303, 
+				 spellid  : 158911,
+				 itemid   : 110621,
+				 itemslot : 'Ring', 
+				 name     : 'Breath of Versatility'
+				}];
+
+			var bestRingEnchants = [
+				{effectid : 5324, 
+				 spellid  : 158914,
+				 itemid   : 110638,
+				 itemslot : 'Ring', 
+				 name     : 'Gift of Critical Strike'
+				},
+				{effectid : 5325, 
+				 spellid  : 158915,
+				 itemid   : 110639,
+				 itemslot : 'Ring', 
+				 name     : 'Gift of Haste'
+				},
+				{effectid : 5326, 
+				 spellid  : 158916,
+				 itemid   : 110640,
+				 itemslot : 'Ring', 
+				 name     : 'Gift of Mastery'
+				},
+				{effectid : 5327, 
+				 spellid  : 158917,
+				 itemid   : 110641,
+				 itemslot : 'Ring', 
+				 name     : 'Gift of Multistrike'
+				},
+				{effectid : 5328, 
+				 spellid  : 158918,
+				 itemid   : 110642,
+				 itemslot : 'Ring', 
+				 name     : 'Gift of Versatility'
+				}];
+
+			var weaponEnchants = [
+				{effectid : 5330, 
+				 spellid  : 159235,
+				 itemid   : 110682,
+				 itemslot : 'Weapon', 
+				 name     : 'Mark of the Thunderlord'
+				},
+				{effectid : 5331, 
+				 spellid  : 159236,
+				 itemid   : 112093,
+				 itemslot : 'Weapon', 
+				 name     : 'Mark of the Shattered Hand'
+				},
+				{effectid : 5337, 
+				 spellid  : 159671,
+				 itemid   : 112164,
+				 itemslot : 'Weapon', 
+				 name     : 'Mark of Warsong'
+				},
+				{effectid : 5334, 
+				 spellid  : 159672,
+				 itemid   : 112165,
+				 itemslot : 'Weapon', 
+				 name     : 'Mark of the Frostwolf'
+				},
+				{effectid : 5335, 
+				 spellid  : 159673,
+				 itemid   : 112115,
+				 itemslot : 'Weapon', 
+				 name     : 'Mark of Shadowmoon'
+				},
+				{effectid : 5336, 
+				 spellid  : 159674,
+				 itemid   : 112160,
+				 itemslot : 'Weapon', 
+				 name     : 'Mark of Blackrock'
+				},
+				{effectid : 5384, 
+				 spellid  : 173323,
+				 itemid   : 118015,
+				 itemslot : 'Weapon', 
+				 name     : 'Mark of Bleeding Hollow'
+				}];
+
 	    	function showToon(toon){
 	    		console.log(toon);
 	    		var toonname = toon.name;
@@ -49,27 +285,77 @@
                 //"-card.jpg"
                 //"-profilemain.jpg"
                 //"-inset.jpg"
+                var ring1 = toon.items.finger1.tooltipParams.enchant;
+                var ring2 = toon.items.finger2.tooltipParams.enchant;
+                var cloak = toon.items.back.tooltipParams.enchant;
+                var neck  = toon.items.neck.tooltipParams.enchant;
+                //var weapon  = toon.items.neck.tooltipParams.enchant;
 
 	    		var img = toon.thumbnail.split("-avatar.jpg");
-	    		$('.toon').append('<h3><img src="http://eu.battle.net/static-render/eu/' + img[0] +'-profilemain.jpg" alt="image of ' + toonname +'">');
-	    		//console.log('showing Toon');
+	    		$('.container').append('<div style="float:left;margin:5px; width:150px;height:300px; overflow:hidden;"><img src="http://eu.battle.net/static-render/eu/' + img[0] +'-avatar.jpg" alt="image of ' + toonname +'"><h3>('+ toon.level + ') '+ toonname +'</h3><h4>Cloakenchant: ' + checkCloakEnchant(cloak) + '</h4></div>');
+	    		console.log(toon);
+	    	}
+	    	function checkWeaponEnchant(enchantId){
+	    		//console.log($.grep(weaponEnchants, function(obj) { return obj.effectid == enchantId; }));
+	    	}
+	    	function checkRingEnchant(enchantId){
+	    		//console.log($.grep(bestRingEnchants, function(obj) { return obj.effectid == enchantId; }));
+	    	}
+	    	function checkCloakEnchant(enchantId){
+	    		// check for undefined
+	    		if(enchantId === undefined){
+	    			return 'no enchant!';
+	    		}
+	    		//check if the enchant is a gift enchant
+	    		var enchant = $.grep(bestCloakEnchants, function(obj) { return obj.effectid == enchantId; });
+	    		if(enchant.length>0){
+	    			return enchant[0].name;
+	    		}
+	    		//check if there is a breath enchant
+	    		else{ //not the best enchant
+	    			enchant = $.grep(cloakEnchants, function(obj) { return obj.effectid == enchantId; });
+	    		}
+	    		//pre wod enchant
+	    		if(enchant.length>0){
+	    			return '(!) ' + enchant[0].name;
+	    		}
+	    		return 'no WoD enchant!';
+	    	}
+	    	function checkNeckEnchant(enchantId){
+
 	    	}
 	    	function showGuild(guild){
 	    		var members = guild.members;
+	    		members.sort(compare);
 	    		var img,name,toon;
 	    		for (var i = 0; i < members.length; i++) {
 	    			toon = members[i].character;
 	    			img = toon.thumbnail.split("-avatar.jpg");
 	    			name= toon.name;
-	    			if(toon.level>10){
-	    				$('.container').append('<div style="float:left;margin : 5px;"><img src="http://eu.battle.net/static-render/eu/' + img[0] +'-avatar.jpg" alt="image of ' + name +'"><h3>' + name +'</h3></div>');
+	    			if(toon.level>99 && (members[i].rank == 0 || members[i].rank == 1 || members[i].rank ==3 || members[i].rank ==5)){
+	    				//$('.container').append('<div style="float:left;margin:5px; width:150px;height:300px; overflow:hidden;"><img src="http://eu.battle.net/static-render/eu/' + img[0] +'-avatar.jpg" alt="image of ' + name +'"><h3>('+ toon.level + ') '+ name +'</h3></div>');
+	    				getToonData(name);
 	    			}
 				}
 	    	}
-	    	function getData(){
+	    	function compare(a,b) {
+			  if (a.rank < b.rank)
+			     return -1;
+			  if (a.rank > b.rank)
+			    return 1;
+			  return 0;
+			}
+			function getToonData(name){
+				$.ajax({
+	    			url : 'https://eu.api.battle.net/wow/character/Silvermoon/'+ name + '?locale=en_GB&jsonp=showToon&fields=items&apikey=utjuren597wypkfd2qkvp4u27kjyap8e',
+	    			type: 'get',
+	    			dataType: 'jsonp',
+	    			success: showToon
+	    		});
+			}
+	    	function getGuildData(){
 	    		$.ajax({
 	    			url : 'https://eu.api.battle.net/wow/guild/Silvermoon/Parallel?fields=members&jsonp=showGuild&locale=en_GB&apikey=utjuren597wypkfd2qkvp4u27kjyap8e',
-	    			//url : 'https://eu.api.battle.net/wow/character/Silvermoon/Derrin?locale=en_GB&jsonp=showToon&apikey=utjuren597wypkfd2qkvp4u27kjyap8e',
 	    			type: 'get',
 	    			dataType: 'jsonp',
 	    			//success: showToon
@@ -83,7 +369,8 @@
 	    		alert('testing');
 	    	}
 	    	$(function(){
-			    getData();
+			    getGuildData();
+			    //getToonData('Beariath');
 			});
 	    	
 	    </script>
