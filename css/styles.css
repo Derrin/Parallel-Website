@@ -28,8 +28,16 @@ h1 small {
   display: block;
   color: #0677B0;
 }
-body {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: American Captain;
+}
+body {
+  font-family: Futura;
 }
 /* Class colours */
 .death-knight {
@@ -85,6 +93,9 @@ body {
 .alliance,
 .horde {
   font-weight: bold;
+}
+th {
+  text-align: center;
 }
 #splash {
   bottom: 50%;

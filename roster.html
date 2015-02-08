@@ -292,8 +292,9 @@
                 //var weapon  = toon.items.neck.tooltipParams.enchant;
 
 	    		var img = toon.thumbnail.split("-avatar.jpg");
-	    		$('.container').append('<div style="float:left;margin:5px; width:150px;height:300px; overflow:hidden;"><img src="http://eu.battle.net/static-render/eu/' + img[0] +'-avatar.jpg" alt="image of ' + toonname +'"><h3>('+ toon.level + ') '+ toonname +'</h3><h4>Cloakenchant: ' + checkCloakEnchant(cloak) + '</h4></div>');
-	    		console.log(toon);
+	    		$('.container').append('<div style="float:left;margin:5px; width:150px;height:300px; overflow:hidden;"><img src="http://eu.battle.net/static-render/eu/' + img[0] +'-avatar.jpg" alt="image of ' + toonname +'"><h3>('+ toon.level + ') '+ toonname +'</h3>');
+	    		//<h4>Cloakenchant: ' + checkCloakEnchant(cloak) + '</h4></div>
+	    		//console.log(toon);
 	    	}
 	    	function checkWeaponEnchant(enchantId){
 	    		//console.log($.grep(weaponEnchants, function(obj) { return obj.effectid == enchantId; }));
@@ -368,6 +369,7 @@
 	    	function test(){
 	    		alert('testing');
 	    	}
+
 	    	$(function(){
 			    getGuildData();
 			    //getToonData('Beariath');
